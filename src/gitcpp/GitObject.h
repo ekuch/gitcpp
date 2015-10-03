@@ -6,20 +6,29 @@
 #define GITCPP_GITOBJECT_H
 
 
-#include <bits/shared_ptr.h>
+#include <memory>
 #include "Repository.h"
+#include "GitObjectId.h"
+#include "GitObjectType.h"
+#include "GitObjectIdPrefix.h"
+
+struct git_object;
+class Repository;
 
 class GitObject {
 public:
+    virtual ~GitObject();
+    static std::shared_ptr<GitObject> MakeShared();
+
     // TODO: Move these to the Repository object
-    static std::shared_ptr<GitObject> LookUp(Repository& repository, const GitObjectId& objectId, const GitObjectType& gitObjectType);
-    static std::shared_ptr<GitObject> LookUpPrefix(Repository& repository1, const GitObjectIdPrefix& objectIdPrefix, GitObjectType gitObjectType1);
+    // TODO: static std::shared_ptr<GitObject> LookUp(Repository& repository, const GitObjectId& objectId, const GitObjectType& gitObjectType);
+    // TODO: static std::shared_ptr<GitObject> LookUpPrefix(Repository& repository1, const GitObjectIdPrefix& objectIdPrefix, GitObjectType gitObjectType1);
 
     // Assumes we are the "treeish"
     std::shared_ptr<GitObject> LookUpByPath(const std::string& sPath, GitObjectType gitObjectType1) const;
 
     GitObjectId ObjectId() const;
-    GitObjectPrefix ShortObjectId() const;
+    //TODO GitObjectPrefix ShortObjectId() const;
 
     GitObjectType Type() const;
 
@@ -27,6 +36,11 @@ public:
 
     std::shared_ptr<GitObject> Peel(GitObjectType type);
     std::shared_ptr<GitObject> Duplicate();
+
+//protected:
+    GitObject();
+private:
+    git_object* m_pObject;
 };
 
 

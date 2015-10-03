@@ -9,10 +9,8 @@
 #include <string>
 #include <git2/repository.h>
 #include "Reference.h"
-
-struct git_repository_init_options;
-
-
+#include "RepositoryReferenceManager.h"
+#include "GitObjectId.h"
 
 class RepositoryInitOptions {
 public:
@@ -47,31 +45,31 @@ private:
     git_repository_init_options* m_pOptions;
     const EFlags m_eFlags;
     const EMode m_eMode;
-    const std::string& m_sWorkingPath,
-    const std::string& m_sDescription,
-    const std::string& m_sTemplatePath,
-    const std::string& m_sInitialHead,
-    const std::string& m_sOriginUrl
+    const std::string& m_sWorkingPath;
+    const std::string& m_sDescription;
+    const std::string& m_sTemplatePath;
+    const std::string& m_sInitialHead;
+    const std::string& m_sOriginUrl;
 };
 
 struct git_repository;
 class Config;
 class Reference;
+class RepositoryReferenceManager;
 
 class Repository {
 public:
+    Repository();
     friend class HandleUtility;
     class FetchHeadCallback
     {
-        virtual int EntryCallback(const std::string& refName, const std::string& remoteUrl, const ObjectId& oid, bool isMerge, void* payload) = 0;
+        virtual int EntryCallback(const std::string& refName, const std::string& remoteUrl, const GitObjectId& oid, bool isMerge, void* payload) = 0;
     };
 
     class MergeHeadCallback
     {
-        virtual int CommitCallback(const ObjectId *oid, void *payload) = 0;
+        virtual int CommitCallback(const GitObjectId& oid, void *payload) = 0;
     };
-
-    class
 
     virtual ~Repository();
     static std::shared_ptr<Repository> Open(const std::string& sPath);
@@ -86,7 +84,7 @@ public:
     std::string WorkingDir() const;
     void SetWorkingDir(const std::string& sWorkingDir, bool updateGitLink);
     bool IsBare() const;
-    std::shared_ptr<Config> Config() const;
+    /*std::shared_ptr<Config> Config() const;
     std::shared_ptr<Config> ConfigSnapshot() const;
     std::shared_ptr<ObjectDatabase> ObjectDatabase() const;
     std::shared_ptr<ReferenceDatabase> ReferenceDatabase() const;
@@ -100,13 +98,13 @@ public:
     void MergeHeadForEach(MergeHeadCallback* pCallback, void* payload);
 
     ObjectId HashFile(const std::string& sPath, ObjectType type, std::shared_ptr<std::string> as_path);
+     */
 
 protected:
 private:
-    Repository();
 
     git_repository* m_pRepository;
-    shared_ptr<RepositoryReferenceManager> m_pReferenceManager;
+    std::shared_ptr<RepositoryReferenceManager> m_pReferenceManager;
 
 };
 

@@ -6,10 +6,13 @@
 #define GITCPP_REPOSITORYREFERENCEMANAGER_H
 
 #include <string>
-#include <bits/shared_ptr.h>
+#include <memory>
 #include "Reference.h"
 
 struct git_repository;
+
+class Reference;
+class Repository;
 
 class ReferenceIterator
 {
@@ -17,7 +20,7 @@ public:
     ReferenceIterator();
     ~ReferenceIterator();
     std::string NextName();
-    Reference Next();
+    std::shared_ptr<Reference> Next();
 };
 
 class RepositoryReferenceManager

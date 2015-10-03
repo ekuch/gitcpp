@@ -9,7 +9,8 @@
 #include "../Reference.h"
 
 class HandleUtility {
-    static git_repository* Handle(const Repository& reference)
+public:
+    static git_repository*& Handle(Repository& reference)
     {
         return reference.m_pRepository;
     }

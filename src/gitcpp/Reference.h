@@ -6,20 +6,24 @@
 #define GITCPP_REFERENCE_H
 
 #include <string>
-#include <bits/shared_ptr.h>
+#include <memory>
 #include "Repository.h"
+#include "GitObjectId.h"
+#include "GitObject.h"
+
+class Repository;
 
 class Reference {
 public:
-    static bool IsValidName(const std::string& sName) const;
+    static bool IsValidName(const std::string& sName);
     static bool NormalizeName(std::string& sName);
 
     enum EType {
         DIRECT,
-        SYMBOLIC
+        SYMBOLICs
     };
-    ObjectId Target() const;
-    ObjectId TargetPeel() const; // direct and hard tag
+    GitObjectId Target() const;
+    GitObjectId TargetPeel() const; // direct and hard tag
     EType Type() const;
     std::string Name() const;
     std::shared_ptr<Reference> Resolve();
@@ -31,8 +35,10 @@ public:
     bool IsRemote() const;
     bool IsTag() const;
     bool IsNote() const;
-    GitObject Peel(ObjectType objectType);
+    //GitObject Peel(GitObjectType objectType);
     std::string ShortHand();
+private:
+    git_reference* m_pReference;
 };
 
 

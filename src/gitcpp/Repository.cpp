@@ -27,41 +27,34 @@ std::shared_ptr<Repository> Repository::Open(const std::string& sPath)
     return ptrRepository;
 }
 
-static std::shared_ptr<Repository> Repository::Init(const std::string& sPath, const RepositoryInitOptions& options)
+std::shared_ptr<Repository> Repository::Init(const std::string& sPath, const RepositoryInitOptions& options)
 {
     auto ptrRepository = std::make_shared<Repository>();
     ErrorUtility::ThrowOnError("", git_repository_init_ext(&ptrRepository->m_pRepository, sPath.c_str(), &(options.get())));
+    return ptrRepository;
 }
-
+/*
 std::shared_ptr<Reference> Head() const
 {
     git_repository_head()
 }
+ */
 
 bool Repository::HeadExists() const
 {
-    return Head().get() != nullptr;
+    return false;//TODO return Head().get() != nullptr;
 }
 bool Repository::IsHeadDetatched() const
 {
-    int nCode = git_repository_head_detached(m_pRepository);
-    if (nCode == 1) return true;
-    if (nCode == 0) return false;
-    ErrorUtility::ThrowError("git_repository_head_detached", nCode);
+    ToBool(git_repository_head_detached, m_pRepository);
 }
 bool Repository::IsHeadUnborn() const
 {
-    int nCode = git_repository_head_unborn(m_pRepository);
-    if (nCode == 1) return true;
-    if (nCode == 0) return false;
-    ErrorUtility::ThrowError("git_repository_head_unborn", nCode);
+    ToBool(git_repository_head_unborn, m_pRepository);
 }
 bool Repository::IsEmpty() const
 {
-    int nCode = git_repository_is_empty(m_pRepository);
-    if (nCode == 1) return true;
-    if (nCode == 0) return false;
-    ErrorUtility::ThrowError("git_repository_is_empty", nCode);
+    ToBool(git_repository_is_empty, m_pRepository);
 }
 std::string Repository::Path() const
 {
@@ -81,11 +74,8 @@ void Repository::SetWorkingDir(const std::string& sWorkingDir, bool updateGitLin
 }
 bool Repository::IsBare() const
 {
-    int nCode = git_repository_is_bare(m_pRepository);
-    if (nCode == 1) return true;
-    if (nCode == 0) return false;
-    ErrorUtility::ThrowError("git_repository_is_bare", nCode);
+    ToBool(git_repository_is_bare, m_pRepository);
 }
-std::shared_ptr<Config> Repository::Config() const;
+//std::shared_ptr<Config> Repository::Config() const;
 
-std::shared_ptr<Config> Repository::ConfigSnapshot() const;
+//std::shared_ptr<Config> Repository::ConfigSnapshot() const;

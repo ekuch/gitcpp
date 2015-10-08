@@ -10,10 +10,12 @@
 
 namespace gitcpp { namespace config {
   class IConfig {
+  public:
+      virtual ~IConfig() = 0;
       class IForEachCallback {
       public:
           virtual ~IForEachCallback() = 0;
-          virtual void DoWork(const IConfigEntryPtr& ptrEntry, IForEachCallback* pCallback) = 0;
+          virtual int DoWork(const IConfigEntryPtr& ptrEntry, IForEachCallback* pCallback) = 0;
       protected:
           IForEachCallback() {}
       };
@@ -41,7 +43,11 @@ namespace gitcpp { namespace config {
       virtual void ForEachMultivar(IForEachCallback& callback, const std::string& sMultiVarName, const std::string& sRegex) = 0;
       virtual void ForEach(IForEachCallback& callback) = 0;
       virtual void ForEach(IForEachCallback& callback, const std::string& sRegex) = 0;
+
+      virtual IConfigPtr Snapshot() = 0;
   };
+
+        IConfig::~IConfig() {}
 };};
 
 

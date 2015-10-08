@@ -29,6 +29,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigEntry.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigLevel.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigUtil.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndex.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndexEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndexTime.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/util/ErrorUtility.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/util/ErrorUtility.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gitcpp/util/HandleUtility.cpp" isTestSource="false" />
@@ -727,30 +730,33 @@
         <excluded>
           <root url="file://$MODULE_DIR$/src/gitcpp/util/HandleUtility.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigUtil.h" />
-          <root url="file://$MODULE_DIR$/src/gitcpp/RepositoryReferenceManager.h" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/GitObject.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectType.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IRepository.h" />
-          <root url="file://$MODULE_DIR$/src/gitcpp/GitObject.cpp" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/interface/FwdDecl.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObject.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectId.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/RepositoryReferenceManager.cpp" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/RepositoryReferenceManager.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IObjectId.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/util/ErrorUtility.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/ICommit.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/util/ErrorUtility.cpp" />
-          <root url="file://$MODULE_DIR$/src/gitcpp/Repository.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectIdPrefix.h" />
-          <root url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigEntry.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectIdPrefix.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IReference.h" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigEntry.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfig.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectType.h" />
-          <root url="file://$MODULE_DIR$/src/gitcpp/interface/FwdDecl.h" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndexEntry.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/config/IConfigLevel.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/util/HandleUtility.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IIterator.h" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndexTime.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/GitObjectId.h" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/interface/index/IIndex.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/Reference.cpp" />
+          <root url="file://$MODULE_DIR$/src/gitcpp/Repository.cpp" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IObject.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/interface/IObjectType.h" />
           <root url="file://$MODULE_DIR$/src/gitcpp/Repository.h" />
@@ -767,12 +773,12 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/errors.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/graph.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/diff.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/cherrypick.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/ignore.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/refs.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/describe.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/attr.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/cherrypick.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/merge.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/signature.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/cred_helpers.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/global.h" />
@@ -784,14 +790,15 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/strarray.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/sys/odb_backend.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/revert.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/types.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/clone.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/blob.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/rebase.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/status.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/merge.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/config.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/notes.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/revparse.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/sys/reflog.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/oid.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/sys/hashsig.h" />
@@ -822,7 +829,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/pack.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/branch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/object.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/revparse.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/odb_backend.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/sys/openssl.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/include/git2/reset.h" />
@@ -841,7 +847,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/revparse.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/auth.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tls_stream.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/submodule.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/sysdir.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/index.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xprepare.h" />
@@ -852,7 +858,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/global.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/global.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refs.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attrcache.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refs.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/cred.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attrcache.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/revwalk.h" />
@@ -867,23 +873,25 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/pack.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/merge_file.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/integer.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tls_stream.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attrcache.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xdiff.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xpatience.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tag.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb_pack.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/errors.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/sortedcache.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/notes.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/config.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/config.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/diff_stats.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/buf_text.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oidarray.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/iterator.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fnmatch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/delta-apply.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fnmatch.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/ignore.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/remote.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/buf_text.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/graph.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/hash.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/hash.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/ssh.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/stransport_stream.h" />
@@ -893,6 +901,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refspec.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/userdiff.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/delta.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attr.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/reset.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb_loose.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/curl_stream.h" />
@@ -907,13 +916,11 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/stash.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/sortedcache.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/push.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb_pack.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/submodule.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/ident.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/openssl_stream.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/curl_stream.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fnmatch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/revwalk.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tls_stream.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/local.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/offmap.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refdb_fs.c" />
@@ -940,7 +947,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/pathspec.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/strmap.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/hashsig.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refs.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/indexer.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/date.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/delta-apply.c" />
@@ -953,7 +959,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/status.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/status.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transaction.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/buf_text.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xmerge.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/path.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xinclude.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/refspec.c" />
@@ -963,8 +969,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/commit.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/pack-objects.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xmacros.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attr.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xmerge.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fetch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/buffer.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/buffer.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/commit.h" />
@@ -974,6 +979,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/branch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/branch.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oidmap.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/hash.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/pack-objects.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/submodule.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/config_file.c" />
@@ -983,18 +989,19 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/notes.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xdiffi.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xdiffi.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/notes.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/openssl_stream.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/crlf.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xutils.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/vector.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/vector.h" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oid.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oid.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/checkout.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/pathspec.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/filebuf.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/openssl_stream.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/smart.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/iterator.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/util.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/attr_file.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/rebase.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/filebuf.h" />
@@ -1005,7 +1012,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/describe.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/filter.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/map.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oid.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/odb_mempack.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/blob.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/merge.h" />
@@ -1022,6 +1028,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/path.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/oidarray.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/cred_helpers.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/remote.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fetchhead.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/diff_file.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/xdiff/xhistogram.c" />
@@ -1041,6 +1048,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/object_api.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/zstream.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/zstream.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/ignore.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transport.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/transports/auth.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/cc-compat.h" />
@@ -1055,8 +1063,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/diff_xdiff.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/message.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/settings.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/util.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/fetch.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/stransport_stream.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tree.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/src/tree.c" />
@@ -1091,7 +1097,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/date/rfc2822.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/reset/default.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/read.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/binary.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/blob.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/create.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/peel.c" />
@@ -1108,6 +1113,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/packed_one.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/getters.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/merge/trees/commits.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/status.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/isvalidname.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/rebase/iterator.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/network/remote/push.c" />
@@ -1119,8 +1125,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/settargetwithlog.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/modify.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/pathspec.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/ref_helpers.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/stash/save.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/lookup.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/reuc.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/reset/hard.c" />
@@ -1129,14 +1133,12 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/backend.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/crlf.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/clar_libgit2_trace.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/status.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/message.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/commit/parse.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/names.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/clar/fixtures.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/new.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/foreach.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/status/ignore.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/filemodes.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/rebase/abort.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/racy.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/packed.c" />
@@ -1198,12 +1200,13 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/pack/packbuilder.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/collision.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/stage.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/update.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/createwithlog.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/blame/getters.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/discover.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/tree.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/attr/repo.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/tag/list.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/branches/move.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/normalize.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/clar_libgit2_timer.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/core/posix.c" />
@@ -1220,6 +1223,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/submodules.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/backend/nobackend.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/pack/sharing.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/binary.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/network/cred.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/pathspec.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/tree/read.c" />
@@ -1242,12 +1246,14 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/raw/chars.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/reflog/reflog.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/unicode.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/multivar.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/branches/upstreamname.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/merge/workdir/simple.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/trace/trace.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/checkout/index.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/network/refspecs.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/core/rmdir.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/tag/list.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/raw/short.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/network/remote/defaultbranch.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/stats.c" />
@@ -1276,6 +1282,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/filter/blob.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/threads/refdb.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/online/push.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/stash/save.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/configlevel.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/tag/read.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/blame/harder.c" />
@@ -1284,6 +1291,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/diff/drivers.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/cherrypick/bare.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/loose.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/ref_helpers.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/snapshot.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/status/worktree.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/lookup.c" />
@@ -1339,7 +1347,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/threads/thread_helpers.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/stash/foreach.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/threads/iterator.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/branches/move.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/commit/parse.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/checkout/tree.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/nosubs.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/merge/trees/modeconflict.c" />
@@ -1350,7 +1358,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/transport/register.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/status/submodules.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/merge/trees/whitespace.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/multivar.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/rebase/setup.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/object/tree/duplicateentries.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/shorthand.c" />
@@ -1377,7 +1384,6 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/listall.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/merge/workdir/renames.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/odb/pack_data_one.h" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/index/filemodes.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/online/push_util.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/network/remote/delete.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/clone/local.c" />
@@ -1406,7 +1412,7 @@
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/submodule/update.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/repo_helpers.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/date/date.c" />
-          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/refs/update.c" />
+          <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/repo/new.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/checkout/icase.c" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/clar_libgit2.h" />
           <root url="file://$MODULE_DIR$/thirdparty/libgit2/tests/config/validkeyname.c" />

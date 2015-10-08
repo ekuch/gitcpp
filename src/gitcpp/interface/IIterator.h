@@ -12,10 +12,12 @@ namespace gitcpp {
     class IIterator {
     public:
         virtual ~IIterator() = 0;
-        std::shared_ptr<T> Next();
+        virtual std::shared_ptr<T> Next() = 0;
     protected:
-        virtual IIterator() {}
+        IIterator() {}
     };
+    template <typename T>
+    IIterator<T>::~IIterator() { }
 };
 
 #endif //GITCPP_IITERATOR_H

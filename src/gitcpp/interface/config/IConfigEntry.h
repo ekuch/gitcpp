@@ -15,10 +15,11 @@ namespace gitcpp { namespace config{
       virtual ~IConfigEntry() = 0;
       virtual std::string Name() = 0;
       virtual std::string Value() = 0;
-      virtual IConfigLevel Level() = 0;
+      virtual IConfigLevelPtr Level() = 0;
   protected:
       IConfigEntry() {}
   };
+        inline IConfigEntry::~IConfigEntry() {}
 }; };
 
 #endif //GITCPP_ICONFIGENTRY_H

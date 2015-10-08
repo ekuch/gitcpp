@@ -30,6 +30,13 @@ namespace gitcpp {
     typedef std::shared_ptr<IReferenceDatabase> IReferenceDatabasePtr;
     typedef std::shared_ptr<IIndex> IIndexPtr;
 
+    namespace annotated_commit {
+        class IAnnotatedCommit;
+        class IAnnotatedCommitRepositoryExt;
+
+        typedef std::shared_ptr<IAnnotatedCommit> IAnnotatedCommitPtr;
+    };
+
     namespace config {
         class IConfig;
         class IConfigEntry;

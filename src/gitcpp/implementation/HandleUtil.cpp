@@ -3,3 +3,11 @@
 //
 
 #include "HandleUtil.h"
+
+namespace gitcpp {
+    static HandleUtil& Instance()
+    {
+        static HandleUtil util;
+        return util;
+    }
+}
